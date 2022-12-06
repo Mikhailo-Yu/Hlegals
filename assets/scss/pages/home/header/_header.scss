@@ -1,0 +1,32 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-header {
+  background: linear-gradient($bg-gradient1);
+
+  &__grid {
+    position: absolute;
+    background-color: red;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    // todo: потом показать и оформить
+    display: none;
+  }
+
+  &__content {
+    min-height: 100vh;
+
+    &-title {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    
+    // todo: потом показать и оформить
+    display: none;
+  }
+}
