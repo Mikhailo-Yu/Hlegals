@@ -29,14 +29,23 @@
     top: 0;
     right: 0;
     left: 0;
-    padding-top: 50px;
+
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: "logo actions" "logo menu";
+
     gap: $gap-sm $gap;
     z-index: 2;
 
     @extend %container;
+
+    @include sm-min {
+      padding-top: 50px;
+      grid-template-areas: "logo actions" "logo menu";
+    }
+    @include sm {
+      padding-top: $gap;
+      grid-template-areas: "actions actions" "logo menu";
+    }
     }
   &__logo {
     grid-area: logo;
