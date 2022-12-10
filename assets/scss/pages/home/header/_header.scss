@@ -14,39 +14,42 @@
     background-size: 86.4vh;
 
     @include abs-position;
+    @include md {
+      display: none;
+    }
   }
 
   &::after {
     content: "";
 
     background: linear-gradient(to top, $color-primary 0%, transparent 100%);
+        @include abs-position(75%);
 
-    @include abs-position(75%);
   }
 
   &__grid {
     position: relative;
+    z-index: 2;
     top: 0;
     right: 0;
     left: 0;
-
+    align-items: center;
     display: grid;
-    grid-template-columns: auto 1fr;
-
-    gap: $gap-sm $gap;
-    z-index: 2;
 
     @extend %container;
-
+    gap: $gap $gap;
+    grid-template-columns: auto 1fr;
     @include sm-min {
       padding-top: 50px;
+
       grid-template-areas: "logo actions" "logo menu";
     }
     @include sm {
       padding-top: $gap;
+
       grid-template-areas: "actions actions" "logo menu";
     }
-    }
+  }
   &__logo {
     grid-area: logo;
   }
@@ -72,9 +75,8 @@
       top: 50%;
       left: 50%;
 
-      width: 100%;
-      max-width: 620px;
-      margin: 0;
+      width: min(100% - $gap-xl, 620px);
+          margin: 0;
 
       transform: translate(-50%, -50%);
       text-align: center;
@@ -87,9 +89,11 @@
       line-height: 45px;
     }
     &-image {
-      height: 62vh;
 
       transform: translate(4px, 29.2%);
+      @media (min-height: 800px) {
+        height: 62vh;
+      }
     }
   }
 

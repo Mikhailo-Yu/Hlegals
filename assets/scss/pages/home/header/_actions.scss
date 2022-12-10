@@ -2,58 +2,60 @@
 @use "../../../mixins" as *;
 
 .actions {
+  display: flex;
+  align-items: center;
+
+  gap: $gap;
+  @include sm-min {
+    justify-content: flex-end;
+    a {
+      color: $color-white;
+    }
+  }
+  @include sm {
+    justify-content: space-between;
+    a {
+      color: $color-gray-bg-text;
+    }
+  }
+
+  &__languages {
     display: flex;
-    align-items: center;
-    gap: $gap;
 
-    @include sm-min {
-        justify-content: flex-end;
-        a {
-            color: $color-white;
-        }
-    }
-    @include sm {
-        justify-content: space-between;
-        a {
-            color: $color-gray-bg-tex;
-        }
-    }
+    letter-spacing: 1px;
 
-    &__languages {
-        display: flex;
-        gap: 3px;
+    font-size: 12px;
+    font-weight: 700;
 
-        font-weight: 700;
-        font-size: 12px;
-        letter-spacing: 1px;
+    gap: 3px;
 
-        &-link {
+    &-link {
+      padding: 5px 6px;
 
-            border-radius: 8px;
-            padding: 5px 6px;
-            &.-active {
-                background: $color-accent;
-                color: $color-white;
-            }
-        }
+      border-radius: 8px;
+      &.-active {
+        color: $color-white;
+        background: $color-accent;
+      }
     }
-    &__locations {
-        @include md {
-            display: none;
-        }
-        &-link {
-            font-weight: 400;
-            font-style: normal;
-         }
+  }
+  &__locations {
+    @include md {
+      display: none;
     }
-    &__phones {
-        &-link {
-          font-weight: 700;
-        }
+    &-link {
+      font-weight: 400;
+      font-style: normal;
     }
-    &__socials {
-        @include lg {
-            display: none;
-        }
+  }
+  &__phones {
+    &-link {
+      font-weight: 700;
     }
+  }
+  &__socials {
+    @include lg {
+      display: none;
+    }
+  }
 }
