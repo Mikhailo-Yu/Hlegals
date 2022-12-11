@@ -1,0 +1,9 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+    background: linear-gradient($bg-gradient2) ;
+    &__container {
+        @extend %container;
+    }
+}
