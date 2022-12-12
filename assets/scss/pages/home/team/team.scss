@@ -6,16 +6,33 @@
         @extend %container;
         background-color: $color-gray-bg;
         border-radius: 12px;
-        display: flex;
-        gap: 40px;
-        @include sm {
-            display: grid;
-            align-items: center;
 
-            gap: $gap-sm;
-            grid-template-areas: "icon title" "des des";
-            grid-template-columns: 64px 1fr;
+    }
+
+    &__content {
+        display: grid;
+        column-gap: $gap-xl;
+        grid-template-areas: "pic link" "pic quote" "pic cap";
+        @include md {
+            padding: 0 0 20px 20px;
+            column-gap: 0;
         }
+
+    }
+    &__title {
+        @include visually-hidden;
+    }
+    &__flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include md {
+            display: grid;
+            gap: $gap-sm;
+            grid-template-areas: "link link" "quote quote" "picm cap";
+            grid-template-columns: 60px 1fr;
+        }
+
 
     }
     &__page-link {
@@ -24,46 +41,56 @@
         gap: 9px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        grid-area: link;
 
         color: $color-active;
 
         font-size: 0.875 * $font-size;
         padding-top: 40px;
-        @include sm {
+        @include md {
             padding-top: 20px;
+            }
+    }
 
-        }
-    }
-    &__title {
-        @include visually-hidden;
-    }
-    &__content {
-
-    }
     &__picture {
+        grid-area: pic;
     }
     &__image {
+        height: 100%;
         @include xl {
             width: 313px;
-            height: 400px
+            height: 400px;
+            margin-bottom: -4px;
         }
         @include lg {
             width: 283px;
-            height: 370px
+            height: 100%;
+
         }
         @include md {
-            width: 253px;
-            height: 340px
+            display: none;
+
         }
-        @include sm {
+    }
+    &__picture-mini {
+        grid-area: picm;
+    }
+    &__image-mini {
+        display: none;
+
+        @include md {
+            display: block;
             width: 60px;
             height: 60px;
             border-radius: 120px;
+
         }
     }
     &__quote {
+        grid-area: quote;
     }
     &__quote-text {
+
         background: linear-gradient($text-gradient2);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -81,21 +108,23 @@
         }
         @include md {
             padding-right: 0;
+            padding-bottom: 10px;
         }
-        @include sm {
 
-        }
     }
-    &__quote-caption {
+    &__caption {
         color: $color-gray-bg-text;
         display: flex;
         flex-direction: column;
         gap: 5px;
+        grid-area: cap;
         &-name{
             font-weight: 400;
             font-size: 18px;
         }
-
+        @include md {
+            gap: 0;
+        }
     }
     &__indicators {
         padding-top: 20px;
