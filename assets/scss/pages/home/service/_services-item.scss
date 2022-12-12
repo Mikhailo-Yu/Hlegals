@@ -1,0 +1,52 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services-item {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    align-items: baseline;
+    @include sm {
+      display: grid;
+      grid-template-areas: "icon title" "des des";
+      grid-template-columns: 64px 1fr;
+      gap: $gap-sm;
+      align-items: center
+    }
+
+    &__title {
+        font-family: 'TT Norms';
+        font-size: 1.5  * $font-size;
+        line-height: 28px;
+        color: $color-active;
+        @include sm {
+            font-size: 1.125  * $font-size;;
+            line-height: 21px;
+            grid-area: title;
+        }
+    }
+
+    &__description {
+        font-family: 'TT Norms';
+        font-size: 1.125 * $font-size;
+        line-height: 26px;
+        color: $color-white;
+        @include sm {
+            font-size: $font-size;;
+            line-height: 22px;
+            grid-area: des;
+        }
+    }
+    &__icon {
+        order: -1;
+        @include sm {
+            grid-area: icon;
+        }
+
+    }
+    &__image {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+    }
+}
