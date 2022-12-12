@@ -1,0 +1,119 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.team {
+    &__container {
+        @extend %container;
+        background-color: $color-gray-bg;
+        border-radius: 12px;
+        display: flex;
+        gap: 40px;
+        @include sm {
+            display: grid;
+            align-items: center;
+
+            gap: $gap-sm;
+            grid-template-areas: "icon title" "des des";
+            grid-template-columns: 64px 1fr;
+        }
+
+    }
+    &__page-link {
+        display: flex;
+        text-align: center;
+        gap: 9px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        color: $color-active;
+
+        font-size: 0.875 * $font-size;
+        padding-top: 40px;
+        @include sm {
+            padding-top: 20px;
+
+        }
+    }
+    &__title {
+        @include visually-hidden;
+    }
+    &__content {
+
+    }
+    &__picture {
+    }
+    &__image {
+        @include xl {
+            width: 313px;
+            height: 400px
+        }
+        @include lg {
+            width: 283px;
+            height: 370px
+        }
+        @include md {
+            width: 253px;
+            height: 340px
+        }
+        @include sm {
+            width: 60px;
+            height: 60px;
+            border-radius: 120px;
+        }
+    }
+    &__quote {
+    }
+    &__quote-text {
+        background: linear-gradient($text-gradient2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        width: min-content;
+        width: 100%;
+        font-weight: 700;
+        font-size: 2.625 * $font-size;
+        line-height: 1.15;
+        padding-bottom: 20px;
+        padding-right: 40px;
+        @include xl {
+            font-size: 2 * $font-size;
+        }
+        @include md {
+            padding-right: 0;
+        }
+        @include sm {
+
+        }
+    }
+    &__quote-caption {
+        color: $color-gray-bg-text;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &-name{
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+    }
+    &__indicators {
+        padding-top: 20px;
+        @extend %container;
+        display: flex;
+        justify-content: center;
+        gap: $gap-md;
+    }
+    &__indicator {
+        width: $font-size;
+        height: $font-size;
+
+        opacity: 0.2;
+        border-radius: $font-size *0.5;
+        background-color: $color-active;
+
+        &.-active {
+          opacity: 1;
+        }
+      }
+}

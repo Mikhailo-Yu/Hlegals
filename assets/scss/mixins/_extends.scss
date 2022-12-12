@@ -2,7 +2,7 @@
 
 
 %container {
-  width: min(100% - $gap-xl, $container-width);
+  width: min(100% - 1.5 * $gap-xl, $container-width);
 
   margin-inline: auto;
 }
