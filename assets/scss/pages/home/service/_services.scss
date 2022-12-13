@@ -4,8 +4,8 @@
 .services {
   position: relative;
 
-  padding-bottom: 40px;
   margin-bottom: 60px;
+  padding-bottom: 40px;
 
   border-radius: 0 0 12px 12px;
   background: linear-gradient($bg-gradient2);
@@ -40,8 +40,8 @@
 
   &__page-link {
     display: flex;
+
     text-align: center;
-    gap: 2px;
     letter-spacing: 1px;
     text-transform: uppercase;
 
@@ -49,6 +49,8 @@
     color: $color-white;
 
     font-size: 0.875 * $font-size;
+
+    gap: 2px;
   }
   &__container {
     @extend %container;
