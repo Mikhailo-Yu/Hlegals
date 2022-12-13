@@ -2,28 +2,32 @@
 @use "../../../mixins" as *;
 
 .cases__items {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
 
-    display: flex;
-    gap: $gap;
-    border: 1px solid $color-white;
+  height: 100%;
+  padding: 20px;
 
-    padding: 20px;
-    height: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+  border: 1px solid $color-white;
 
-    &-description {
-        font-size: 1.5 * $font-size;
-        line-height: 1.19;
-        color:$color-primary-soft;
-        @include lg {
-            font-size: 1.125 * $font-size;
-        }
+  gap: $gap;
+
+  &-description {
+    color: $color-primary-soft;
+
+    font-size: 1.5 * $font-size;
+    line-height: 1.19;
+
+    @include lg {
+      font-size: 1.125 * $font-size;
     }
-    &-caption {
-        font-size: 1.125 * $font-size;
-        color: $color-gray-bg-text;
-    }
+  }
+  &-caption {
+    color: $color-gray-bg-text;
+
+    font-size: 1.125 * $font-size;
+  }
 }
 
