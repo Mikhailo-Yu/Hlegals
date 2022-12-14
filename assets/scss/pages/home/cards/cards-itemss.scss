@@ -2,39 +2,119 @@
 @use "../../../mixins" as *;
 
 .cards-items {
-    background-color: $color-white;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+    margin-bottom: 40px;
+
+
+  border-radius: 8px;
+  background-color: $color-white;
+  &.-first {
+    @include sm {
+        order: -3;
+    }
+
+  }
+  &.-second {
+    @include sm {
+        order: -2;
+    }
+  }
+  &.-third {
+    position: relative;
+    @include sm {
+        background-color: $color-gray-bg;
+    }
+  }
+  &.-none {
+    @include sm {
+        display: none;
+      }
+}
+
+  gap: 10px;
+  &__title {
+    color: $color-active;
     padding: 20px;
+    font-size: 1.125 * $font-size;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  &__data {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding:0 20px 20px 20px;
+    color: $color-gray-bg-text;
+    @include xl {
+        padding:0 10px 10px 10px;
+      }
+      @include sm {
+        padding:0 10px 20px 20px;
+      }
+
+    font-size: 0.75 * $font-size;
+    font-weight: 700;
+  }
+  &__description {
+    border-top: 4px solid $color-gray-bg-separator;
+    color: $color-black;
+    margin:0 20px 20px 20px;
+    padding-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    &.-none {
+        @include sm {
+            display: none;
+          }
+    }
+    @include xl {
+        margin:0 10px 10px 10px;
+      }
+  }
+  &__button {
+
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    &__title {
-         font-weight: 400;
-        font-size: 1.125 * $font-size;
-        line-height: 21px;
-        color: $color-active;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    background: $color-active;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    top: 62%;
+    left: 26%;
+
+    height: 50px;
+    position: absolute;
+    z-index: 9900;
+
+      @include sm {
+       position: static;
+
+       max-width: 250px;
+
+       margin-inline: auto;
     }
-    &__data {
-        font-weight: 700;
-        font-size: 0.75 * $font-size;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: $color-gray-bg-text;
-    }
-    &__description {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
-        color: $color-black;
-    }
-    &__picture {
-    }
-    &__image {
-    }
-    &.-picture {
-    }
-    &__buttom {
-    }
-    &__link {
-    }
+}
+&__link {
+    padding: 0 78.5px 0 78.5px;
+    color: $color-white;
+}
+&__picture {
+  padding: 0;
+order: -1;
+&.-none {
+    @include sm {
+        display: none;
+      }
+}
+}
+&__image {
+   width: 100%;
+}
+
 }

@@ -1,0 +1,36 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+.contact {
+  display: flex;
+  gap: $gap;
+  align-items: center;
+  @include xs {
+    flex-direction: column;
+    gap: $gap;
+}
+    &__socials {
+        &-link {
+        }
+    }
+
+    &__phones {
+        font-weight: 700;
+        font-size: $font-size;
+        line-height: 1.15;
+        color: $color-primary-alt;
+
+        &-link {
+        }
+    }
+
+    &__emails {
+        font-weight: 700;
+        font-size: $font-size;
+        line-height: 1.15;
+        &-link {
+        }
+    }
+
+}

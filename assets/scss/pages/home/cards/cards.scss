@@ -2,37 +2,67 @@
 @use "../../../mixins" as *;
 
 .cards {
-    background-color: $color-gray-bg;
-    &__container {
-        @extend %container;
+  background-color: $color-gray-bg;
+  padding-top: 40px;
+  position: relative;
+  &__container {
+    @extend %container;
 
+  }
+  &__title {
+    width: max-content;
+    margin-bottom: 40px;
+    background: linear-gradient($text-gradient2);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 2.625 * $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            @include sm {
+              font-size: 2 * $font-size;
+              margin-bottom: 20px;
+            }
+  }
+  &__page-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-active;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__content {
+    column-count: 3;
+    @include xl {
+      column-count: 2;
     }
-    &__title {
-        width: max-content;
-
-
-        background: linear-gradient($text-gradient2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
-
-
-        font-size: 2.625 * $font-size;
-        font-weight: 700;
-        line-height: 1.15;
+    @include md {
+      column-count: 1;
     }
-    &__page-link {
-        display: flex;
-        align-items: center;
-        font-weight: 700;
-        font-size: 14px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: $color-active;
+    @include md {
+      display: flex;
+      flex-direction: column;
     }
-    &__content {
-
+  }
+  &::after {
+    content: "";
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, $color-gray-bg 86.5%);
+    position: absolute;
+    top: 670px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include lg {
+      display: none;
     }
+}
 }
 
