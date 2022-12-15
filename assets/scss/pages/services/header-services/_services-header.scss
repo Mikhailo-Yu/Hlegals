@@ -2,6 +2,7 @@
 @use "../../../mixins" as *;
 
 .services-header {
+  border-radius: 0 0 12px 12px;
   background: linear-gradient($bg-gradient2);
 
   @include page-header;

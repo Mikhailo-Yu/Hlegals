@@ -21,8 +21,8 @@
       order: -2;
     }
   }
-  &.-third {
-    @include sm {
+  &.-bg {
+    @include lg {
       background-color: $color-gray-bg;
     }
   }
