@@ -2,16 +2,18 @@
 @use "../../../mixins" as *;
 
 .cards {
-  background-color: $color-gray-bg;
-  padding-top: 40px;
   position: relative;
+
+  padding-top: 40px;
+
+  background-color: $color-gray-bg;
   &__container {
     @extend %container;
-
   }
   &__title {
     width: max-content;
     margin-bottom: 40px;
+
     background: linear-gradient($text-gradient2);
     -webkit-background-clip: text;
             background-clip: text;
@@ -20,17 +22,20 @@
     font-weight: 700;
     line-height: 1.15;
 
+    @include sm {
+      margin-bottom: 20px;
+
+      font-size: 2 * $font-size;
+    }
     -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
-            @include sm {
-              font-size: 2 * $font-size;
-              margin-bottom: 20px;
-            }
   }
   &__page-link {
     display: flex;
     align-items: center;
+
     margin-bottom: 5px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
 
@@ -53,16 +58,18 @@
     }
   }
   &::after {
-    content: "";
-    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, $color-gray-bg 86.5%);
     position: absolute;
     top: 670px;
     right: 0;
     bottom: 0;
     left: 0;
+
+    content: "";
+
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, $color-gray-bg 86.5%);
+
     @include lg {
       display: none;
     }
+  }
 }
-}
-

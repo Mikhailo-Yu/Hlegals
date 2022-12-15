@@ -2,20 +2,22 @@
 @use "../../../mixins" as *;
 
 .page-footer {
-    @include footer;
-    &__container {
-        @extend %container;
-        border-top: 4px solid $color-gray-bg-separator;
+  @include footer;
+  &__container {
+    display: flex;
+    justify-content: space-between;
 
-        padding-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 40px;
-        @include lg {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    border-top: 4px solid $color-gray-bg-separator;
+
+    @extend %container;
+    @include lg {
+      align-items: center;
+      flex-direction: column;
+
+      gap: 20px;
     }
-
+  }
 }

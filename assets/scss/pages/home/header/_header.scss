@@ -5,6 +5,8 @@
   position: relative;
 
   background: linear-gradient($bg-gradient1);
+
+  @include page-header;
   &::before {
     content: "";
 
@@ -26,7 +28,6 @@
 
     @include abs-position(75%);
   }
-@include page-header;
 
   &__content {
     position: relative;

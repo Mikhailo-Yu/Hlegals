@@ -13,14 +13,15 @@
     left: 0;
 
     display: grid;
-    
 
     @extend %container;
     gap: $gap $gap;
     grid-template-columns: auto 1fr;
     @include sm-min {
-      padding-top: 50px;
       align-items: start;
+
+      padding-top: 50px;
+
       grid-template-areas: "logo actions" "logo menu";
     }
     @include sm {
@@ -38,7 +39,6 @@
   &__actions {
     grid-area: actions;
   }
-
 }
 
 
@@ -134,7 +134,7 @@
 
     font-size: 18px;
     &.-active {
-      text-decoration:  underline;
+      text-decoration: underline;
     }
   }
 }
@@ -153,67 +153,68 @@
 
 @mixin actions-dark {
   display: flex;
-align-items: center;
+  align-items: center;
 
-gap: $gap;
-@include sm-min {
-  justify-content: flex-end;
-  a {
-    color: $color-white;
-  }
-}
-@include sm {
-  justify-content: space-between;
-  a {
-    color: $color-gray-bg-text;
-  }
-}
-
-&__languages {
-  display: flex;
-
-  letter-spacing: 1px;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  gap: 3px;
-
-  &-link {
-    padding: 5px 6px;
-
-    border-radius: 8px;
-    &.-active {
+  gap: $gap;
+  @include sm-min {
+    justify-content: flex-end;
+    a {
       color: $color-white;
-      background: $color-accent;
     }
   }
-}
-&__locations {
-  @include md {
-    display: none;
+  @include sm {
+    justify-content: space-between;
+    a {
+      color: $color-gray-bg-text;
+    }
   }
-  &-link {
-    font-weight: 400;
-    font-style: normal;
-  }
-}
-&__phones {
-  &-link {
+
+  &__languages {
+    display: flex;
+
+    letter-spacing: 1px;
+
+    font-size: 12px;
     font-weight: 700;
+
+    gap: 3px;
+
+    &-link {
+      padding: 5px 6px;
+
+      border-radius: 8px;
+      &.-active {
+        color: $color-white;
+        background: $color-accent;
+      }
+    }
   }
-}
-&__socials {
-  @include lg {
-    display: none;
+  &__locations {
+    @include md {
+      display: none;
+    }
+    &-link {
+      font-weight: 400;
+      font-style: normal;
+    }
   }
-}
+  &__phones {
+    &-link {
+      font-weight: 700;
+    }
+  }
+  &__socials {
+    @include lg {
+      display: none;
+    }
+  }
 }
 
 
 //services
 @mixin services {
   position: relative;
+
   border-radius: 0 0 12px 12px;
   background: linear-gradient($bg-gradient2);
 
@@ -285,8 +286,6 @@ gap: $gap;
   &__grid {
     display: grid;
 
-
-
     gap: $gap-xl;
     grid-template-columns: repeat(3, 1fr);
     @include xl {
@@ -331,7 +330,6 @@ gap: $gap;
       line-height: 21px;
 
       grid-area: title;
-
     }
   }
 
@@ -347,7 +345,6 @@ gap: $gap;
       line-height: 22px;
 
       grid-area: des;
-
     }
   }
   &__icon {
@@ -502,74 +499,77 @@ gap: $gap;
 
 @mixin footer {
   background-color: $color-gray-bg;
-    &__wraper {
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
+  &__wraper {
+    display: flex;
+    flex-direction: column;
 
-    }
+    gap: $gap;
+  }
 
-    &__copyrate {
-        font-weight: 400;
-        font-size: $font-size;
-        line-height: 1.15;
-        text-align: right;
-        color: $color-gray-bg-text;
-        text-align: center;
+  &__copyrate {
+    text-align: right;
+    text-align: center;
 
-    }
+    color: $color-gray-bg-text;
 
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 1.15;
+  }
 }
 //footer-locations
 
 @mixin footer-locations {
   display: flex;
-  gap: 45px;
   align-items: center;
+
+  gap: 45px;
   @include xs {
-      flex-direction: column;
-      gap: $gap-sm;
+    flex-direction: column;
+
+    gap: $gap-sm;
   }
   &__adress {
-      font-style: normal;
-      font-weight: 400;
-      font-size: $font-size;
-      line-height: 19px;
-      color: $color-primary;
+    color: $color-primary;
 
+    font-size: $font-size;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 19px;
   }
   &__link {
-      font-weight: 700;
-      font-size:0.75 * $font-size;
-      line-height: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-size: 0.75 * $font-size;
+    font-weight: 700;
+    line-height: 14px;
   }
 }
 
 //footer-contacts
 @mixin footer-contacts {
   display: flex;
-  gap: $gap;
   align-items: center;
+
+  gap: $gap;
   @include xs {
     flex-direction: column;
+
     gap: $gap;
-}
+  }
 
-    &__phones {
-        font-weight: 700;
-        font-size: $font-size;
-        line-height: 1.15;
-        color: $color-primary-alt;
+  &__phones {
+    color: $color-primary-alt;
 
-    }
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
 
-    &__emails {
-        font-weight: 700;
-        font-size: $font-size;
-        line-height: 1.15;
-
-    }
-
+  &__emails {
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
 }

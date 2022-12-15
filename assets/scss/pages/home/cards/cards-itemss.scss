@@ -5,117 +5,126 @@
   display: flex;
   flex-direction: column;
 
-    margin-bottom: 40px;
-
+  margin-bottom: 40px;
 
   border-radius: 8px;
   background-color: $color-white;
+
+  gap: 10px;
   &.-first {
     @include sm {
-        order: -3;
+      order: -3;
     }
-
   }
   &.-second {
     @include sm {
-        order: -2;
+      order: -2;
     }
   }
   &.-third {
-        @include sm {
-        background-color: $color-gray-bg;
+    @include sm {
+      background-color: $color-gray-bg;
     }
   }
   &.-none {
     @include sm {
-        display: none;
-      }
-}
-
-  gap: 10px;
+      display: none;
+    }
+  }
   &__title {
-    color: $color-active;
     padding: 20px;
+
+    color: $color-active;
+
     font-size: 1.125 * $font-size;
     font-weight: 400;
     line-height: 21px;
   }
   &__data {
+    padding: 0 20px 20px 20px;
+
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding:0 20px 20px 20px;
+
     color: $color-gray-bg-text;
-    @include xl {
-        padding:0 10px 10px 10px;
-      }
-      @include sm {
-        padding:0 10px 20px 20px;
-      }
 
     font-size: 0.75 * $font-size;
     font-weight: 700;
+
+    @include xl {
+      padding: 0 10px 10px 10px;
+    }
+    @include sm {
+      padding: 0 10px 20px 20px;
+    }
   }
   &__description {
-    border-top: 4px solid $color-gray-bg-separator;
-    color: $color-black;
-    margin:0 20px 20px 20px;
+    margin: 0 20px 20px 20px;
     padding-top: 16px;
+
+    color: $color-black;
+    border-top: 4px solid $color-gray-bg-separator;
+
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-    &.-none {
-        @include sm {
-            display: none;
-          }
-    }
+
     @include xl {
-        margin:0 10px 10px 10px;
+      margin: 0 10px 10px 10px;
+    }
+    &.-none {
+      @include sm {
+        display: none;
       }
+    }
   }
   &__button {
+    position: absolute;
+    z-index: 9900;
+    bottom: 40px;
+    left: 40%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
-    background: $color-active;
-    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
-    border-radius: 12px;
-    bottom: 40px;
-    left: 40%;
     height: 50px;
-    position: absolute;
-    z-index: 9900;
+
+    border-radius: 12px;
+    background: $color-active;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+
     @include md {
       left: 34%;
-   }
-
-      @include sm {
-       position: static;
-
-       max-width: 250px;
-
-       margin-inline: auto;
     }
-}
-&__link {
-    padding: 0 78.5px 0 78.5px;
-    color: $color-white;
-}
-&__picture {
-  padding: 0;
-order: -1;
-&.-none {
     @include sm {
+      position: static;
+
+      max-width: 250px;
+
+      margin-inline: auto;
+    }
+  }
+  &__link {
+    padding: 0 78.5px 0 78.5px;
+
+    color: $color-white;
+  }
+  &__picture {
+    order: -1;
+
+    padding: 0;
+    &.-none {
+      @include sm {
         display: none;
       }
-}
-}
-&__image {
-   width: 100%;
-}
-
+    }
+  }
+  &__image {
+    width: 100%;
+  }
 }

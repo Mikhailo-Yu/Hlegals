@@ -2,6 +2,7 @@
 @use "../../../mixins" as *;
 
 .services-menu {
-  @include menu-dark;
   padding-bottom: 75px;
+
+  @include menu-dark;
 }
