@@ -22,8 +22,7 @@
     }
   }
   &.-third {
-    position: relative;
-    @include sm {
+        @include sm {
         background-color: $color-gray-bg;
     }
   }
@@ -85,12 +84,14 @@
     background: $color-active;
     box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
     border-radius: 12px;
-    top: 62%;
-    left: 26%;
-
+    bottom: 40px;
+    left: 40%;
     height: 50px;
     position: absolute;
     z-index: 9900;
+    @include md {
+      left: 34%;
+   }
 
       @include sm {
        position: static;
