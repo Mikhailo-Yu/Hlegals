@@ -2,32 +2,6 @@
 @use "../../../mixins" as *;
 
 .cases__items {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  height: 100%;
-  padding: 20px;
-
-  border: 1px solid $color-white;
-
-  gap: $gap;
-
-  &-description {
-    color: $color-primary-soft;
-
-    font-size: 1.5 * $font-size;
-    line-height: 1.19;
-
-    @include lg {
-      font-size: 1.125 * $font-size;
-    }
-  }
-  &-caption {
-    color: $color-gray-bg-text;
-
-    font-size: 1.125 * $font-size;
-  }
+  @include cases-items;
 }
 

@@ -1,9 +1,8 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-
 .page-footer {
-    background-color: $color-gray-bg;
+    @include footer;
     &__container {
         @extend %container;
         border-top: 4px solid $color-gray-bg-separator;
@@ -16,25 +15,6 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-        }
-    }
-    &__wraper {
-        display: flex;
-        flex-direction: column;
-        gap: $gap;
-
-    }
-
-
-
-    &__copyrate {
-        font-weight: 400;
-        font-size: $font-size;
-        line-height: 1.15;
-        text-align: right;
-        color: $color-gray-bg-text;
-        text-align: center;
-        &-description {
         }
     }
 

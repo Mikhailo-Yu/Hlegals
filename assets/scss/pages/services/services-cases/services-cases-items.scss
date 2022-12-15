@@ -1,6 +1,6 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.locations {
-   @include footer-locations;
+.services-cases__items {
+  @include cases-items;
 }

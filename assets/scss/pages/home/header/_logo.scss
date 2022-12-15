@@ -2,9 +2,5 @@
 @use "../../../mixins" as *;
 
 .logo {
-  &__image {
-    @include sm {
-      width: 88px;
-    }
-  }
+  @include logo;
 }

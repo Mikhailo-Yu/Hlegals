@@ -2,60 +2,5 @@
 @use "../../../mixins" as *;
 
 .services-item {
-  display: flex;
-  align-items: baseline;
-  flex-direction: column;
-
-  gap: $gap-md;
-  @include sm {
-    display: grid;
-    align-items: center;
-
-    gap: $gap-sm;
-    grid-template-areas: "icon title" "des des";
-    grid-template-columns: 64px 1fr;
-  }
-
-  &__title {
-    color: $color-active;
-
-    font-family: "TT Norms";
-    font-size: 1.5  * $font-size;
-    line-height: 28px;
-
-    @include sm {
-      font-size: 1.125  * $font-size;
-      line-height: 21px;
-
-      grid-area: title;      ;
-    }
-  }
-
-  &__description {
-    color: $color-white;
-
-    font-family: "TT Norms";
-    font-size: 1.125 * $font-size;
-    line-height: 26px;
-
-    @include sm {
-      font-size: $font-size;
-      line-height: 22px;
-
-      grid-area: des;      ;
-    }
-  }
-  &__icon {
-    order: -1;
-
-    @include sm {
-      grid-area: icon;
-    }
-  }
-  &__image {
-    width: 64px;
-    height: 64px;
-
-    border-radius: 18px;
-  }
+  @include services-item;
 }

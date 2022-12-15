@@ -26,40 +26,8 @@
 
     @include abs-position(75%);
   }
+@include page-header;
 
-  &__grid {
-    position: relative;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    display: grid;
-    align-items: center;
-
-    @extend %container;
-    gap: $gap $gap;
-    grid-template-columns: auto 1fr;
-    @include sm-min {
-      padding-top: 50px;
-
-      grid-template-areas: "logo actions" "logo menu";
-    }
-    @include sm {
-      padding-top: $gap;
-
-      grid-template-areas: "actions actions" "logo menu";
-    }
-  }
-  &__logo {
-    grid-area: logo;
-  }
-  &__menu {
-    grid-area: menu;
-  }
-  &__actions {
-    grid-area: actions;
-  }
   &__content {
     position: relative;
 
