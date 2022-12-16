@@ -7,6 +7,10 @@
 
   background-color: $color-primary;
 
+  &__title {
+    @include visually-hidden;
+  }
+
   &__container {
     @extend %container;
   }
