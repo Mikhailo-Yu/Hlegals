@@ -288,6 +288,7 @@
   &__grid {
     display: grid;
     align-items: stretch;
+
     gap: $gap-xl;
     grid-template-columns: repeat(3, 1fr);
     @include xl {
@@ -307,7 +308,7 @@
 
 @mixin services-item {
   display: flex;
-  align-items: baseline;
+ 
   flex-direction: column;
 
   gap: $gap-md;
@@ -385,8 +386,9 @@
 
     color: $color-accent;
     border: 1px solid $color-white;
-    font-weight: 700;
+
     font-size: 0.875 * $font-size;
+    font-weight: 700;
 
     grid-column-end: 1;
     grid-column-start: 1;
@@ -485,8 +487,9 @@
     text-transform: uppercase;
 
     color: $color-primary;
-font-weight: 700;
+
     font-size: 14px;
+    font-weight: 700;
   }
   &__content {
     display: grid;

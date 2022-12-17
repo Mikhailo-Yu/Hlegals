@@ -10,9 +10,9 @@
   &__container {
     @extend %container;
   }
- &__title-hidden {
-  @include visually-hidden;
- }
+  &__title-hidden {
+    @include visually-hidden;
+  }
   &__title {
     width: max-content;
     margin-bottom: 40px;

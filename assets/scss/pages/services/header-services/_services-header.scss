@@ -2,7 +2,6 @@
 @use "../../../mixins" as *;
 
 .services-header {
-
   background: linear-gradient($bg-gradient3);
 
   @include page-header;
