@@ -17,11 +17,22 @@ html {
 
 
 a {
+  transition: 0.5s;
   text-decoration: none;
-transition: 0.5s;
+
   color: $color-active;
   &:hover {
-    text-shadow: 0 0 15px rgb(252, 0, 0);
     transform: translateY(-5px);
+
+    text-shadow: 0 0 15px rgb(252, 0, 0);
   }
+}
+.-btn {
+  transition: 0.5s;
+
+
+  &:hover {
+    transform: translateY(-5px);
+
+   }
 }
