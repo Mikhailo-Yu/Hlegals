@@ -9,8 +9,13 @@
 @use "pages/home/clients";
 @use "pages/home/cards";
 @use "pages/home/footer";
+
 @use "pages/services/header-services";
 @use "pages/services/services-hero";
 @use "pages/services/services-cases";
 @use "pages/services/services-clients";
 @use "pages/services/services-footer";
+
+@use "pages/about/about-header";
+@use "pages/about/hero";
+@use "pages/about/photo";

@@ -21,12 +21,12 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
-  $(".services-menu__btn").on("click", function() {
-    $(this).toggleClass("-active");
-    $(".services-menu__list").stop(true, true).slideToggle(500);
-  });
-});
+// $(document).ready(function() {
+//   $(".services-menu__btn").on("click", function() {
+//     $(this).toggleClass("-active");
+//     $(".services-menu__list").stop(true, true).slideToggle(500);
+//   });
+// });
 
 
 

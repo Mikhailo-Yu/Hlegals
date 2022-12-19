@@ -2,6 +2,8 @@
 @use "../../../mixins" as *;
 @use "../../../mixins-styles" as *;
 
-.clients {
-  @include clients;
+.about-header {
+
+
+  @include header-light;
 }

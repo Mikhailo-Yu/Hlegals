@@ -2,11 +2,11 @@
 @use "../../../mixins" as *;
 @use "../../../mixins-styles" as *;
 
-.services-menu {
+.about-menu {
   padding-bottom: 75px;
   @include md  {
     padding-bottom: 0;
   }
 
-  @include menu-dark;
+  @include menu-light;
 }

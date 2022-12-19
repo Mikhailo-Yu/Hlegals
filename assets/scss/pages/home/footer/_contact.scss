@@ -1,6 +1,6 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
-
+@use "../../../mixins-styles" as *;
 
 .contact {
   @include footer-contacts;

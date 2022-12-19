@@ -2,6 +2,6 @@
 @use "../../../mixins" as *;
 @use "../../../mixins-styles" as *;
 
-.clients {
-  @include clients;
+.about-actions {
+  @include actions-light;
 }

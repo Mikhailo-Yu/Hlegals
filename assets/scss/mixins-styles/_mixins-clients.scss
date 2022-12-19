@@ -1,0 +1,36 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+//clients
+@mixin clients {
+  &__container {
+    max-width: 100vw;
+  }
+  &__title-hidden {
+    @include visually-hidden;
+  }
+  &__title {
+    padding-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $color-primary;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__content {
+    display: grid;
+
+    grid-template-columns: repeat(4, 25%);
+    @include lg {
+      grid-template-columns: repeat(3, 33.333%);
+    }
+    @include md {
+      grid-template-columns: repeat(2, 50%);
+    }
+    justify-items: stretch;
+  }
+}

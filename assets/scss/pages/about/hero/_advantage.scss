@@ -1,0 +1,62 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+@use "../../../mixins-styles" as *;
+
+.advantages {
+position: relative;
+@include lg {
+  display: flex;
+  gap: $gap;
+  padding-top: $gap;
+}
+@include sm {
+  display: block;
+  gap: $gap;
+  padding-top: $gap;
+  text-align: center;
+}
+@include xx {
+    text-align: left;
+    padding-top: $gap-md;
+}
+&::after {
+  position: absolute;
+    top: 2%;
+    left: -30px;
+    width: 4px;
+
+  content: "";
+
+  background: $color-gray-bg-separator;
+  @include lg-min {
+    height: 291px;
+  }
+  @include lg {
+    top: -5%;
+    height: 4px;
+    left: 0;
+    width:100%;
+  }
+
+}
+
+  &__items {
+    margin-bottom: 40px;
+    @include lg {
+      margin-bottom: 0;
+      flex-basis: 380px;
+    }
+    @include sm {
+      margin-bottom: 20px;
+    }
+    margin-bottom: $gap;
+  }
+  &__image {
+  }
+  &__description {
+    font-size: 1.125 * $font-size;
+    line-height: 1.15;
+    color: $color-primary;
+
+   }
+}

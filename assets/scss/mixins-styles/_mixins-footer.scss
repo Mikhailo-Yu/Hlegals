@@ -1,0 +1,109 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+//footer
+
+@mixin footer {
+  background-color: $color-gray-bg;
+  &__wraper {
+    display: flex;
+    flex-direction: column;
+
+    gap: $gap;
+  }
+
+  &__copyrate {
+    text-align: right;
+    text-align: center;
+
+    color: $color-gray-bg-text;
+
+    font-size: $font-size;
+    font-weight: 400;
+    line-height: 1.15;
+  }
+}
+
+//footer-contacts
+@mixin footer-contacts {
+  display: flex;
+  align-items: center;
+
+  gap: $gap;
+  @include xs {
+    flex-direction: column;
+
+    gap: $gap;
+  }
+
+  &__phones {
+    color: $color-primary-alt;
+
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  &__emails {
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+}
+
+//footer-locations
+
+@mixin footer-locations {
+  display: flex;
+  align-items: center;
+
+  gap: 45px;
+  @include xs {
+    flex-direction: column;
+
+    gap: $gap-sm;
+  }
+  &__adress {
+    color: $color-primary;
+
+    font-size: $font-size;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 19px;
+  }
+  &__link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    font-size: 0.75 * $font-size;
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
+
+//footer-contacts
+@mixin footer-contacts {
+  display: flex;
+  align-items: center;
+
+  gap: $gap;
+  @include xs {
+    flex-direction: column;
+
+    gap: $gap;
+  }
+
+  &__phones {
+    color: $color-primary-alt;
+
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  &__emails {
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+}

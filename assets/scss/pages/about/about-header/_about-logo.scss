@@ -2,6 +2,10 @@
 @use "../../../mixins" as *;
 @use "../../../mixins-styles" as *;
 
-.clients {
-  @include clients;
+.about-logo {
+  display: flex;
+
+  @include logo;
+
+  @include breadcrumbs-light;
 }
