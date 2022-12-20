@@ -52,12 +52,10 @@ position: relative;
     }
     margin-bottom: $gap;
   }
-  &__image {
-  }
+
   &__description {
     font-size: 1.125 * $font-size;
     line-height: 1.15;
     color: $color-primary;
-
    }
 }
