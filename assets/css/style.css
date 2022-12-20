@@ -2867,6 +2867,7 @@ a:hover {
   .work__container {
     display: block;
 
+    margin-bottom: 40px;
     padding: 0;
   }
   .achivment__items {
