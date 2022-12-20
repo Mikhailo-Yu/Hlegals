@@ -22,7 +22,7 @@ margin-bottom: 80px;
 &__container {
 width: 100%;
 
-  background-image: url('../../../../../assets/img/team.png');
+  background-image: url('../../../../img/team.png');
   background-size: contain;
   background-repeat: no-repeat;
   height: 438px;
@@ -45,7 +45,7 @@ width: 100%;
   }
   @include xs {
     height: 217px;
-    background-image: url(../../../../../assets/img/team-cut.png);
+    background-image: url(../../../../img/team-cut.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
