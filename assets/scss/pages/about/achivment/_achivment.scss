@@ -1,0 +1,88 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+@use "../../../mixins-styles" as *;
+$size: 16px;
+
+.achivment {
+  background: $color-gray-bg;
+  border-radius: 12px 12px 0px 0px;
+  &__title-hidden {
+    @include visually-hidden;
+  }
+  &__container {
+    @extend %container;
+
+  }
+
+  &__title {
+    font-size: 0.875 * $font-size;
+    line-height: 17px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-primary;
+    padding-top: 30px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+    padding-top: 30px;
+    @include ul-min {
+      gap: $gap-xl;
+    }
+    @include xl {
+      gap: $gap-sm;
+      flex-wrap: wrap;
+    }
+    @include md {
+      gap: $gap;
+    }
+    @include xx {
+      gap: $gap-sm;
+    }
+  }
+  &__picture {
+    &.-none {
+      @include md {
+        display: none;
+      }
+    }
+  }
+  &__image {
+    margin-bottom: 30px;
+    @include md {
+      width: 236px;
+      height: 86px;
+    }
+    @include sm {
+      width: 157px;
+      height: 57.04px;
+    }
+  }
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    gap: 14px;
+
+  }
+  &__indicator {
+    width: $size;
+    height: $size;
+
+    opacity: 0.2;
+    border-radius: $size *0.5;
+    background-color: $color-active;
+&.-none {
+  @include md-min {
+    display: none;
+  }
+}
+    &.-active {
+      opacity: 1;
+    }
+  }
+}
