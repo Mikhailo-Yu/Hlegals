@@ -4,51 +4,61 @@
 
 .work {
   &__container {
-    @extend %container;
-    padding: 0 110px;
     display: flex;
-    gap: $gap-xl;
+
     margin-bottom: 90px;
+    padding: 0 110px;
+
+    @extend %container;
+    gap: $gap-xl;
     @include lg {
       display: block;
     }
     @include md {
       display: block;
+
       padding: 0;
     }
   }
   &__title {
     @include visually-hidden;
   }
- &__text {
-  display: flex;
-  flex-direction: column;
-  gap: $gap;
-  flex-shrink: 1.45;
-  margin-bottom: 80px;
-  @include sm {
-    gap: 5px;
-    margin-bottom: 20px;
-  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1.45;
+
+    margin-bottom: 80px;
+
+    gap: $gap;
+    @include sm {
+      margin-bottom: 20px;
+
+      gap: 5px;
+    }
   }
   &__paragraph {
     font-size: 21px;
     line-height: 1.3;
+
     @include sm {
       font-size: 18px;
     }
   }
   &__quote {
-    font-size: 2.625 * $font-size;
-    line-height: 1.15;
+    margin-top: 20px;
+
     background: linear-gradient($text-gradient2);
     -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 2.625 * $font-size;
+    line-height: 1.15;
+
+    @include sm {
+      font-size: 2 * $font-size;
+    }
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-margin-top: 20px;
-@include sm {
-  font-size: 2 * $font-size;
-}
+            text-fill-color: transparent;
   }
 }

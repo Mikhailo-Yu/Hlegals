@@ -4,9 +4,9 @@
 
 .about-menu {
   padding-bottom: 75px;
-  @include md  {
+
+  @include md {
     padding-bottom: 0;
   }
-
   @include menu-light;
 }

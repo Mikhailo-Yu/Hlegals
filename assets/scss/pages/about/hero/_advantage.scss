@@ -3,59 +3,71 @@
 @use "../../../mixins-styles" as *;
 
 .advantages {
-position: relative;
-@include lg {
-  display: flex;
-  gap: $gap;
-  padding-top: $gap;
-}
-@include sm {
-  display: block;
-  gap: $gap;
-  padding-top: $gap;
-  text-align: center;
-}
-@include xx {
-    text-align: left;
-    padding-top: $gap-md;
+  position: relative;
+
+  @include lg {
+    display: flex;
+
+    padding-top: $gap;
+
+    gap: $gap;
+  }
+  @include sm {
+    display: block;
+
+    padding-top: $gap;
+
+    text-align: center;
+
+    gap: $gap;
+  }
+  @include xx {
     margin-bottom: 30px;
-}
-&::after {
-  position: absolute;
+    padding-top: $gap-md;
+
+    text-align: left;
+  }
+  &::after {
+    position: absolute;
     top: 2%;
     left: -30px;
+
     width: 4px;
 
-  content: "";
+    content: "";
 
-  background: $color-gray-bg-separator;
-  @include lg-min {
-    height: 291px;
-  }
-  @include lg {
-    top: -5%;
-    height: 4px;
-    left: 0;
-    width:100%;
-  }
+    background: $color-gray-bg-separator;
 
-}
+    @include lg-min {
+      height: 291px;
+    }
+    @include lg {
+      top: -5%;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+    }
+  }
 
   &__items {
     margin-bottom: 40px;
+    margin-bottom: $gap;
+
     @include lg {
-      margin-bottom: 0;
       flex-basis: 380px;
+
+      margin-bottom: 0;
     }
     @include sm {
       margin-bottom: 20px;
     }
-    margin-bottom: $gap;
   }
 
   &__description {
+    color: $color-primary;
+
     font-size: 1.125 * $font-size;
     line-height: 1.15;
-    color: $color-primary;
-   }
+  }
 }

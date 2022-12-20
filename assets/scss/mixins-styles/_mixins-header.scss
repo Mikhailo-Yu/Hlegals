@@ -116,7 +116,6 @@
       top: 100%;
       right: 0;
 
-
       display: none;
 
       padding: $gap-lg;
@@ -126,6 +125,7 @@
     }
     @include sm {
       left: 0;
+
       text-align: center;
     }
   }
@@ -328,7 +328,6 @@
       top: 100%;
       right: 0;
 
-
       display: none;
 
       padding: $gap-lg;
@@ -338,6 +337,7 @@
     }
     @include sm {
       left: 0;
+
       text-align: center;
     }
   }
@@ -352,6 +352,7 @@
     font-size: 18px;
     &.-active {
       text-decoration: underline;
+
       color: $color-accent;
     }
   }
@@ -379,11 +380,9 @@
     a {
       color: $color-gray-bg-text;
     }
-
   }
   @include sm {
     justify-content: space-between;
-
   }
 
   &__languages {
@@ -398,6 +397,7 @@
 
     &-link {
       padding: 5px 6px;
+
       color: $color-gray-bg-text;
       border-radius: 8px;
       &.-active {

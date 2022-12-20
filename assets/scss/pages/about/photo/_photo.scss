@@ -4,73 +4,79 @@
 
 .photo {
   display: flex;
-
+  align-items: center;
   justify-content: center;
-align-items: center;
-height: 438px;
-margin-bottom: 80px;
-@include xl {
-  height: 392px;
-}
-@include lg {
-  height: 310px;
-  margin-bottom: 20px;
-}
-@include md {
-  height: 217px;
-}
-&__container {
-width: 100%;
 
-  background-image: url('../img/team.png');
-  background-size: contain;
-  background-repeat: no-repeat;
   height: 438px;
-  @include xl-min {
-    background-size: cover;
-  }
+  margin-bottom: 80px;
+
   @include xl {
     height: 392px;
   }
   @include lg {
     height: 310px;
+    margin-bottom: 20px;
   }
   @include md {
     height: 217px;
-
   }
-  @include md {
-    height: 217px;
+  &__container {
+    width: 100%;
+    height: 438px;
 
-  }
-  @include xs {
-    height: 217px;
-    background-image: url(../img/team-cut.png);
-    background-size: cover;
+    background-image: url("../img/team.png");
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @include xl-min {
+      background-size: cover;
+    }
+    @include xl {
+      height: 392px;
+    }
+    @include lg {
+      height: 310px;
+    }
+    @include md {
+      height: 217px;
+    }
+    @include md {
+      height: 217px;
+    }
+    @include xs {
+      height: 217px;
+
+      background-image: url(../img/team-cut.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
-}
   &__description {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100%;
-    font-size: 6 * $font-size;
-    line-height: 1.15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+
     text-align: center;
     letter-spacing: 63px;
     text-transform: uppercase;
-    color: $color-white;
+
     opacity: 0.8;
-    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+    color: $color-white;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+
+    font-size: 6 * $font-size;
+    line-height: 1.15;
+
     @include lg {
       font-size: 3 * $font-size;
     }
     @include md {
-      font-size:  36px;
       text-align: center;
-letter-spacing: 20px;
+      letter-spacing: 20px;
+
+      font-size: 36px;
     }
   }
-
 }

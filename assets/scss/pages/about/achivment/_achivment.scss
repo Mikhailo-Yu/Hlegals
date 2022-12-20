@@ -4,38 +4,43 @@
 $size: 16px;
 
 .achivment {
+  border-radius: 12px 12px 0 0;
   background: $color-gray-bg;
-  border-radius: 12px 12px 0px 0px;
   &__title-hidden {
     @include visually-hidden;
   }
   &__container {
     @extend %container;
-
   }
 
   &__title {
-    font-size: 0.875 * $font-size;
-    line-height: 17px;
-    font-weight: 700;
+    padding-top: 30px;
+
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: $color-primary;
-    padding-top: 30px;
+
+    font-size: 0.875 * $font-size;
+    font-weight: 700;
+    line-height: 17px;
   }
   &__items {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: $gap;
+
     padding-top: 30px;
+
+    gap: $gap;
     @include ul-min {
       gap: $gap-xl;
     }
     @include xl {
-      gap: $gap-sm;
       flex-wrap: wrap;
+
+      gap: $gap-sm;
     }
     @include md {
       gap: $gap;
@@ -53,6 +58,7 @@ $size: 16px;
   }
   &__image {
     margin-bottom: 30px;
+
     @include md {
       width: 236px;
       height: 86px;
@@ -65,9 +71,10 @@ $size: 16px;
   &__indicators {
     display: flex;
     justify-content: center;
-    padding-bottom: 30px;
-    gap: 14px;
 
+    padding-bottom: 30px;
+
+    gap: 14px;
   }
   &__indicator {
     width: $size;
@@ -76,11 +83,11 @@ $size: 16px;
     opacity: 0.2;
     border-radius: $size *0.5;
     background-color: $color-active;
-&.-none {
-  @include md-min {
-    display: none;
-  }
-}
+    &.-none {
+      @include md-min {
+        display: none;
+      }
+    }
     &.-active {
       opacity: 1;
     }

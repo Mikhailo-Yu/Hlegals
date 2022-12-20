@@ -4,22 +4,23 @@
 
 
 .hero {
-
   &__container {
-    @extend %container;
-    padding:0 110px;
     display: flex;
+
+    padding: 0 110px;
+
+    @extend %container;
     gap: 60px;
     @include xl {
-      padding:0 30px 0 30px;
+      padding: 0 30px 0 30px;
     }
     @include lg {
-      gap: $gap;
-      padding: 0;
       flex-direction: column;
+
+      padding: 0;
+
+      gap: $gap;
     }
-
   }
-
 }
 
