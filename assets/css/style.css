@@ -1965,6 +1965,20 @@ a:hover {
 
 .introduction {
   max-width: 640px;
+  margin-bottom: 20px;
+}
+.introduction__title-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
 }
 .introduction__article {
   display: -webkit-box;
@@ -2040,6 +2054,19 @@ a:hover {
 
   height: 438px;
   margin-bottom: 80px;
+}
+.photo__title-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
 }
 .photo__container {
   width: 100%;

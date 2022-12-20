@@ -20,6 +20,9 @@
   @include md {
     height: 217px;
   }
+  &__title-hidden {
+    @include visually-hidden;
+  }
   &__container {
     width: 100%;
     height: 438px;
